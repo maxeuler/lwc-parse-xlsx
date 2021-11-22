@@ -52,7 +52,6 @@ export default class ContactUpload extends LightningElement {
     }
 
     parseCSV(csvFile) {
-        console.log('3');
         Papa.parse(csvFile, {
             quoteChar: '"',
             delimiter: '',
