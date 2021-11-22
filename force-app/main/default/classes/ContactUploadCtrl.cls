@@ -7,7 +7,6 @@ public without sharing class ContactUploadCtrl {
 
     @AuraEnabled
     public static void createContacts(List<SObject> contacts) {
-        System.debug('Kontakt :: ' + contacts);
         insert contacts;
     }
 }
