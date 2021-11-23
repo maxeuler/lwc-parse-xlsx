@@ -58,7 +58,7 @@ export default class ContactUpload extends LightningElement {
             header: 'true',
             encoding: 'utf-8',
             complete: results => {
-                this.csvParserCompletionHander(results);
+                this.csvParserCompletionHandler(results);
             },
             error: error => {
                 // handle errors
@@ -66,7 +66,7 @@ export default class ContactUpload extends LightningElement {
         });
     }
 
-    csvParserCompletionHander(results) {
+    csvParserCompletionHandler(results) {
         const rows = results.data;
         this.contacts = rows.map(row => this.processRowData(row));
         this.contacts = this.contacts.filter(contact => contact['LastName']);
